@@ -1,5 +1,7 @@
 package org.teachingkidsprogramming.section01forloops;
 
+import org.teachingextensions.logo.Tortoise;
+
 public class SimpleSquare
 {
   public static void main(String[] args) throws Exception
@@ -9,6 +11,9 @@ public class SimpleSquare
     //  Do the following 4 times --#5.1
     //      Change the pen color of the line the tortoise draws to blue --#4
     //      Move the tortoise 50 pixels --#2
+    Tortoise.show();
+    Tortoise.move(50);
+    Tortoise.turn(94);
     //      Turn the tortoise to the right (90 degrees) --#3
     //  Repeat --#5.2
     //
