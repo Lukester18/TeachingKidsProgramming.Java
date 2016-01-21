@@ -23,9 +23,13 @@ public class Houses
     //       Turn the tortoise 90 degrees to the right --#4
     Tortoise.turn(90);
     //       Move the tortoise the height of a house --#5
+    Tortoise.move(currentHeight);
     //       Turn the tortoise 90 degrees to the left --#6
+    Tortoise.turn(-90);
     //       Move the tortoise 20 pixels --#7
+    Tortoise.move(20);
     //       Turn the tortoise 90 degrees to the left --#8
+    Tortoise.turn(-90);
     //   ------------- End of drawHouse recipe --#9.3
     //   drawHouse with height 120 (recipe below) --#10
     //   drawHouse with height 90 (recipe below) --#12
