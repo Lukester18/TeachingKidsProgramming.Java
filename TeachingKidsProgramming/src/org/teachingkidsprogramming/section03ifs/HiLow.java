@@ -15,7 +15,7 @@ public class HiLow
       //    Do the following 8 times --#9.1
       //         Ask the user for a guess --#1
       int guess = MessageBox.askForNumericalInput("guess");
-      if (guess == randomNumber)
+      if (guess == 653)
       {
         //         If the guess is correct --#4
         //               Play a bell --#2
