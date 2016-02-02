@@ -61,30 +61,32 @@ public class ChooseYourOwnAdventure
       String ninja = MessageBox.askForTextInput("Do you want to train to be a NINJA?????? 'Yes' or 'HECK YES'?");
       //               If they answer "yes" --#13.1
       if ("Yes".equalsIgnoreCase(ninja))
-        ;
-      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
+      {
+        //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
+        MessageBox
+            .showMessage("Awesome dude! You live out the rest of your life fighting crimes and eating pizza!");
+      }
       //               Otherwise, if they answer "heck yes" --#13.2
       else if ("HECK YES".equalsIgnoreCase(ninja))
-        ;
-      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
+      {
+        //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
+        MessageBox
+            .showMessage("Awesome dude! You live out the rest of your life fighting crimes and eating pizza!");
+      }
       //               Otherwise, if they answer anything else --#13.3
+      else
+      {
+        endStory();
+      }
       //                    endStory --#16
+      endStory();
       //            ------------- End of pourIntoToilet recipe --#12.3
     }
     else if ("backyard".equalsIgnoreCase(input))
     {
       //         Otherwise, if they answer "backyard" --#8.2
       //            pourIntoBackyard (recipe below) --#19.1
-      //            ------------- Recipe for pourIntoBackyard --#19.2
-      //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
-      //                Ask the user "As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?" --#18
-      //                If they answer "faint" --#20.1
-      //                        Tell the user "You made a delicious soup! Yum! The end." --#21
-      //                Otherwise, if they answer "scream" --#20.2
-      //                    startStory --#22
-      //                Otherwise, if they answer anything else --#20.3
-      //                    endStory --#23
-      //         ------------- End of pourIntoBackyard recipe --#19.3
+      pourIntoBackyard();
     }
     //         Otherwise, if they answer anything else --#8.3
     else
@@ -93,6 +95,35 @@ public class ChooseYourOwnAdventure
       endStory();
     }
     //      ------------- End of approachOoze recipe --#4.3
+  }
+  private static void pourIntoBackyard()
+  {
+    //            ------------- Recipe for pourIntoBackyard --#19.2
+    //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
+    MessageBox.showMessage(
+        "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
+    //                Ask the user "As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?" --#18
+    String soup = MessageBox
+        .askForTextInput("As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?");
+    //                If they answer "faint" --#20.1
+    if ("Faint".equalsIgnoreCase(soup))
+    {
+      //                        Tell the user "You made a delicious soup! Yum! The end." --#21
+      MessageBox.showMessage("You made a delicioous soup! Yum! The End.");
+    }
+    //                Otherwise, if they answer "scream" --#20.2
+    else if ("Scream".equalsIgnoreCase(soup))
+    {
+      //                    startStory --#22
+      startStory();
+    }
+    //                Otherwise, if they answer anything else --#20.3
+    else
+    {
+      //                    endStory --#23
+      endStory();
+    }
+    //         ------------- End of pourIntoBackyard recipe --#19.3
   }
   private static void wakeUp()
   {
