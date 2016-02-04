@@ -14,7 +14,7 @@ public class ConcentricLoop
     //  Set the tortoise speed to 10  --#4.3
     Tortoise.setSpeed(10);
     //  Do the following 360 times --#3.1
-    for (int i = 1; i < 360; i++)
+    for (int i = 0; i < 360; i++)
     {
       //      Move the tortoise 3 pixels --#1
       Tortoise.move(3);
@@ -31,8 +31,7 @@ public class ConcentricLoop
           //              Turn the tortoise 1 degree --#6   
           Tortoise.turn(1);
           //              Change the width of the line that the tortoise draws to 1/100th of the current line --#9
-          int penWidth = Tortoise.getPenWidth();
-          Tortoise.setPenWidth(penWidth / 100);
+          Tortoise.setPenWidth(1 / 100);
           //          Repeat --#8.2
         }
       }
