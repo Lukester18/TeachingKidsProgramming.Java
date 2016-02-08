@@ -19,13 +19,17 @@ public class DigiFlower
     Tortoise.getBackgroundWindow().setBackground(Grays.Silver);
     //    Make the line the tortoise draws 3 pixels wide --#15
     //    createColorPalette (recipe below) --#9.1
-    //        Do the following 15 times --#13.1
-    //          drawOctogon (recipe below) --#10.1
-    //          Turn the tortoise 1/15th of 360 degrees to the right --#12
-    //        Repeat --#14.2
     createColorPalette();
+    for (int i = 0; i < 15; i++)
+    {
+      //        Do the following 15 times --#13.1
+      //          drawOctogon (recipe below) --#10.1
+      drawOctogon();
+      //          Turn the tortoise 1/15th of 360 degrees to the right --#12
+      Tortoise.turn(360 / 15);
+      //        Repeat --#14.2
+    }
     //
-    drawOctogon();
   }
   private static void drawOctogon()
   {
