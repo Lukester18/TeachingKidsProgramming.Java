@@ -18,6 +18,7 @@ public class DigiFlower
     //    Make the background silver  --#8
     Tortoise.getBackgroundWindow().setBackground(Grays.Silver);
     //    Make the line the tortoise draws 3 pixels wide --#15
+    Tortoise.setPenWidth(3);;
     //    createColorPalette (recipe below) --#9.1
     createColorPalette();
     for (int i = 0; i < 15; i++)
