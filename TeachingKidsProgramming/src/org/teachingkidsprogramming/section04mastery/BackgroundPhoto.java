@@ -11,6 +11,8 @@ public class BackgroundPhoto
     Tortoise.setSpeed(10);
     //  Set the current picture to this url "http://img2.timeinc.net/ew/dynamic/imgs/101110/sonny-cher_240.jpg" --#7.1
     //  Set the background image to the current picture--#7.2
+    Tortoise.getBackgroundWindow()
+        .setBackgroundImage("http://img2.timeinc.net/ew/dynamic/imgs/101110/sonny-cher_240.jpg");
     //  Set the current side to 2 pixels long --#4.1
     int currentSide = 2;
     //  Do the following 75 times --#2.1
