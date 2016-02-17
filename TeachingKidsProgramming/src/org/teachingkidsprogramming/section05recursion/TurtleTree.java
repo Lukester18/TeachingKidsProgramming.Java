@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Browns;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Grays;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Greens;
 
 public class TurtleTree
@@ -12,12 +13,13 @@ public class TurtleTree
   @SuppressWarnings("unused")
   public static void main(String[] args)
   {
+    int currentBranch = 60;
     Tortoise.show();
     //    Make the tortoise go as fast as possible --#10
     Tortoise.setSpeed(10);
     //    Turn the background black  --#21
+    Tortoise.getBackgroundWindow().setBackground(Grays.DarkGray);
     //    The current branch length = 60 --#1.2
-    int currentBranch = 60;
     //    drawBranch(recipe below) --#2.1
     //
     drawBranch(currentBranch);
@@ -57,7 +59,7 @@ public class TurtleTree
     //            A 60 pixel long branch is saddle brown (TIP: Put the values into the 'colors' HashMap)--#13
     colors.put(60, Browns.SaddleBrown);
     //            Get the value of the branch length from the 'colors' HashMap and use that to set the pen color --#21
-    //Tortoise.setPenColor(colors.get);
+    //Tortoise.setPenColor(colors.get(currentBranch));
     //        ------------- End of adjustColor --#15.3
   }
   private static void drawLowerBranches(int currentBranch)
