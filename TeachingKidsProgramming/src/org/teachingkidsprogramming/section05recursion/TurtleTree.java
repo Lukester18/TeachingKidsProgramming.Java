@@ -61,8 +61,10 @@ public class TurtleTree
     //            drawShorterBranch --#9
     drawShorterBranch(currentBranch);
     //            Turn the Tortoise 30 degrees to the right --#12
+    Tortoise.turn(30);
     //            adjustColor --#16
-    //            Move the tortoise backward the length of the current branch --#11
+    //            Move the tortoise backward the length of the current branch --#11\
+    Tortoise.move(currentBranch * -1);
     //        ------------- End of drawLowerBranches recipe --#6.3
   }
   private static void drawShorterBranch(int currentBranch)
