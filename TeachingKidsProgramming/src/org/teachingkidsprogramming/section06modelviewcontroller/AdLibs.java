@@ -1,9 +1,16 @@
 package org.teachingkidsprogramming.section06modelviewcontroller;
 
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
+
 public class AdLibs
 {
   public static void main(String[] args)
   {
+    String currentAdverb = MessageBox.askForTextInput("Enter an adverb.");
+    String currentEdVerb = MessageBox.askForTextInput("Enter a verb ending in '-ed'.");
+    String currentBodyPart = MessageBox.askForTextInput("Enter a body part.");
+    String currentStory = "Today I woke " + currentAdverb + ". " + "Then I " + currentEdVerb + " " + "my "
+        + currentBodyPart + ". ";
     //  Ask the user to enter an adverb, save it as currentAdverb --#2
     //  Ask the user to enter a verb ending in '-ed', save it as currentEdVerb --#4
     //  Ask the user to enter a body part, save it as currentBodyPart --#6
@@ -12,5 +19,6 @@ public class AdLibs
     //  Add the words '"Then I " + currentEdVerb + " " to the currentStory --#5
     //  Add the words "my " + currentBodyPart + ". " to the current story --#7
     //  Show the currentStory in a message box as a message --#1.1
+    MessageBox.showMessage(currentStory);
   }
 }
