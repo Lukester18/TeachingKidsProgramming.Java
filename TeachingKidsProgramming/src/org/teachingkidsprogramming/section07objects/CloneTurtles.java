@@ -20,10 +20,13 @@ public class CloneTurtles
   private void showSomeTurtles()
   {
     // Use a FOR loop to add your three turtles --#4.1
-    //      Create a turtle instance  --#2.1
-    Turtle myTurtle = new Turtle();
-    //      Add your turtles to your turtle container --#2.2
-    turtles.add(myTurtle);
+    for (int i = 0; i < 3; i++)
+    {
+      //      Create a turtle instance  --#2.1
+      Turtle myTurtle = new Turtle();
+      //      Add your turtles to your turtle container --#2.2
+      turtles.add(myTurtle);
+    }
     // Repeat --#4.2
     //
     // Create a variable to count the number of turtles in the container --#3.1
@@ -33,8 +36,12 @@ public class CloneTurtles
         .setPenColor(PenColors.Yellows.Gold).addTo(mtw);
     //
     // Use a FOREACH loop to add your turtles to your window --#5.1
-    //      Add and Show your turtles on your window --#5.3
-    // Repeat --#5.2
+    for (Turtle turtle : turtles)
+    {
+      //      Add and Show your turtles on your window --#5.3
+      mtw.addAndShowTurtle(turtle);
+      // Repeat --#5.2
+    }
     //
     // Use a FOR loop to teleport all of your turtles around your window  --#6.1
     //      Get your turtle's current position and then set the X position to i*100 + 350 --#6.3
