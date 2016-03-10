@@ -1,6 +1,7 @@
 package org.teachingkidsprogramming.section07objects;
 
 import org.teachingextensions.WindowUtils.MultiTurtleWindow;
+import org.teachingextensions.logo.Sound;
 import org.teachingextensions.logo.Turtle;
 
 public class SuperTurtles
@@ -33,6 +34,8 @@ public class SuperTurtles
     //        Have your crazyTurtle draw a 55 pixel long lightning bolt
     crazyTurtle.drawLightning(55);
     //  ------------- End of makeCrazyTurtle --#5.2
+    new Sound(Sound.TKPSound.Gong);
+    crazyTurtle.speak();
   }
   private void makeSlowTurtle()
   {
