@@ -24,13 +24,13 @@ public class SimpleBubble implements MouseLeftClickListener
   {
     //------------- Recipe for prepareColorPalette --#7
     // Add light steel blue to the color wheel --#4
-    ColorWheel.addColor(PenColors.Blues.LightSteelBlue);
+    ColorWheel.addColor(PenColors.Browns.SandyBrown);
     // Add blue to the color wheel --#5
-    ColorWheel.addColor(PenColors.Blues.Blue);
+    ColorWheel.addColor(PenColors.Grays.Black);
     // Add dark blue to the color wheel --#6
-    ColorWheel.addColor(PenColors.Blues.DarkBlue);
+    ColorWheel.addColor(PenColors.Purples.DarkMagenta);
     // Add purple to the color wheel --#2.3
-    ColorWheel.addColor(PenColors.Purples.Purple);
+    ColorWheel.addColor(PenColors.Blues.Navy);
     //------------- End of prepareColorPalette recipe --#7
   }
   @Override
@@ -43,19 +43,21 @@ public class SimpleBubble implements MouseLeftClickListener
   {
     //------------- Recipe for createBubble --#8
     // Remove previous bubbles from your program window --#9
-    programWindow.clearWindow();
     // Set the radius for the circle to a random number between 10 and 50 --#2.5
-    int radius = NumberUtils.getRandomInt(10, 50);
+    int radius = NumberUtils.getRandomInt(10, 200);
+    int radius2 = NumberUtils.getRandomInt(10, 150);
+    int radius3 = NumberUtils.getRandomInt(10, 100);
+    int radius4 = NumberUtils.getRandomInt(10, 50);
     // Create a circle with the radius and the next color from the color wheel --#2.1
     Circle circle = new Circle(radius, ColorWheel.getRandomColorFromWheel());
-    Circle circle2 = new Circle(radius, ColorWheel.getRandomColorFromWheel());
-    Circle circle3 = new Circle(radius, ColorWheel.getRandomColorFromWheel());
-    Circle circle4 = new Circle(radius, ColorWheel.getRandomColorFromWheel());
+    Circle circle2 = new Circle(radius2, ColorWheel.getRandomColorFromWheel());
+    Circle circle3 = new Circle(radius3, ColorWheel.getRandomColorFromWheel());
+    Circle circle4 = new Circle(radius4, ColorWheel.getRandomColorFromWheel());
     // Move the center of the bubble to the current position of the mouse on the window --#3
     circle.setCenter(x, y);
-    circle2.setCenter(x + 20, y);
-    circle3.setCenter(x, y + 20);
-    circle4.setCenter(x + 20, y + 20);
+    circle2.setCenter(x + 0, y);
+    circle3.setCenter(x, y + 0);
+    circle4.setCenter(x + 0, y + 0);
     // Add the circle to your program window --#2.4
     circle.addTo(programWindow);
     circle2.addTo(programWindow);
