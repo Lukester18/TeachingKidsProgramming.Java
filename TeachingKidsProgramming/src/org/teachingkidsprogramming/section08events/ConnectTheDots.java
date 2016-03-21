@@ -38,9 +38,11 @@ public class ConnectTheDots implements MouseRightClickListener, MouseLeftClickLi
   {
     //        ------------- Recipe for createCircle --#3.0 (everything in this recipe)
     //           Create a new circle with a radius of 11 using the next color on the color wheel 
-    Circle circle = new Circle(11, ColorWheel.getNextColor());
+    Circle circle = new Circle
     //           Change the circle to be 60% opaque 
+    circle.setOpacity(0.6);
     //           Move the circle so that it's center is at the current position of the mouse (x,y) 
+    circle.getOnMouseEntered();
     //           Place the circle on the tortoise's window 
     //        ------------- End of createCircle Recipe --#3.1
   }
