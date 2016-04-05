@@ -15,7 +15,7 @@ public class TurtleTree
     int currentBranch = 60;
     Tortoise.show();
     //    Make the tortoise go as fast as possible --#10
-    Tortoise.setSpeed(3);
+    Tortoise.setSpeed(10);
     //    Turn the background black  --#21
     Tortoise.getBackgroundWindow().setBackground(Grays.DarkGray);
     //    The current branch length = 60 --#1.2
