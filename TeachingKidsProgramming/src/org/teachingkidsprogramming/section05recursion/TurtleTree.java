@@ -4,9 +4,8 @@ import java.awt.Color;
 import java.util.HashMap;
 
 import org.teachingextensions.logo.Tortoise;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Browns;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Grays;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Greens;
 
 public class TurtleTree
 {
@@ -16,7 +15,7 @@ public class TurtleTree
     int currentBranch = 60;
     Tortoise.show();
     //    Make the tortoise go as fast as possible --#10
-    Tortoise.setSpeed(10);
+    Tortoise.setSpeed(3);
     //    Turn the background black  --#21
     Tortoise.getBackgroundWindow().setBackground(Grays.DarkGray);
     //    The current branch length = 60 --#1.2
@@ -47,17 +46,17 @@ public class TurtleTree
     //        ------------- Recipe for adjustColor --#15.2
     HashMap<Integer, Color> colors = new HashMap<Integer, Color>();
     //            A 10 pixel long branch is lime --#20
-    colors.put(10, Greens.Lime);
+    colors.put(10, PenColors.Greens.Lime);
     //            A 20 pixel long branch is forest green --#19
-    colors.put(20, Greens.ForestGreen);
+    colors.put(20, PenColors.Greens.ForestGreen);
     //            A 30 pixel long branch is dark green --#18
-    colors.put(30, Greens.DarkGreen);
+    colors.put(30, PenColors.Greens.DarkGreen);
     //            A 40 pixel long branch is olive --#17
-    colors.put(40, Greens.Olive);
+    colors.put(40, PenColors.Greens.Olive);
     //            A 50 pixel long branch is sienna --#14
-    colors.put(50, Browns.Sienna);
+    colors.put(50, PenColors.Browns.Sienna);
     //            A 60 pixel long branch is saddle brown (TIP: Put the values into the 'colors' HashMap)--#13
-    colors.put(60, Browns.SaddleBrown);
+    colors.put(60, PenColors.Browns.SaddleBrown);
     //            Get the value of the branch length from the 'colors' HashMap and use that to set the pen color --#21
     //Tortoise.setPenColor(colors.get(currentBranch));
     //        ------------- End of adjustColor --#15.3
