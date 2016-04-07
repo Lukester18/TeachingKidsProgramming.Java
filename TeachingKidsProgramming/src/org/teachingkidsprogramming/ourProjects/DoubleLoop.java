@@ -9,10 +9,10 @@ import org.teachingextensions.logo.utils.ColorUtils.PenColors.Whites;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Yellows;
 import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 
-public class NumberOne implements MouseLeftClickListener
+public class DoubleLoop implements MouseLeftClickListener
 {
   private ProgramWindow programWindow;
-  public NumberOne()
+  public DoubleLoop()
   {
     //    Create a ProgramWindow titled My Bubble --#1.1
     programWindow = new ProgramWindow("My Bubble");
@@ -122,7 +122,7 @@ public class NumberOne implements MouseLeftClickListener
     //Make a finish line
     Tortoise.setPenColor(Grays.Black);
     Tortoise.setPenWidth(2);
-    Tortoise.setX(1500);
+    Tortoise.setX(600);
     Tortoise.setY(0);
     Tortoise.setAngle(180);
     Tortoise.move(500);
@@ -168,7 +168,7 @@ public class NumberOne implements MouseLeftClickListener
         Tortoise.move(25);
       }
     }
-    if (Tortoise.getX() == 1500)
+    if (Tortoise.getX() == 600)
     {
       Tortoise.explode();
       Tortoise.setPenColor(Reds.Crimson);
@@ -178,45 +178,13 @@ public class NumberOne implements MouseLeftClickListener
     {
       if (Tortoise.getX() <= 550 && Tortoise.getX() >= 125)
       {
-        Tortoise.move(-25);
-      }
-    }
-    if (x >= 300 && x <= 325)
-    {
-      if (y >= 125 && y <= 150)
-        Tortoise.setPenColor(Yellows.Yellow);
-    }
-    else if (x >= 350 && x <= 375)
-    {
-      if (y >= 125 && y <= 150)
-      {
-        Tortoise.setPenColor(Reds.Red);
-      }
-    }
-    else if (x >= 400 && x <= 425)
-    {
-      if (y >= 125 && y <= 150)
-      {
-        Tortoise.setPenColor(Blues.Aqua);
-      }
-    }
-    else if (x >= 450 && x <= 475)
-    {
-      if (y >= 125 && y <= 150)
-      {
-        Tortoise.setPenColor(Grays.Black);
-      }
-    }
-    else if (x >= 500 && x <= 525)
-    {
-      if (y >= 125 && y <= 150)
-      {
-        Tortoise.setPenColor(Whites.White);
+        Tortoise.setX(100);
+        Tortoise.setY(300);
       }
     }
   }
   public static void main(String[] args)
   {
-    new NumberOne();
+    new DoubleLoop();
   }
 }
