@@ -26,6 +26,8 @@ public class NumberTwo implements MouseLeftClickListener
     beforePlayingTheGame();
     int Block1X = NumberUtils.getRandomInt(100, 525);
     int Block1Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block1X);
+    Tortoise.setY(Block1Y);
   }
   private void beforePlayingTheGame()
   {
