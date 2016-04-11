@@ -2,17 +2,13 @@ package org.teachingkidsprogramming.ourProjects;
 
 import org.teachingextensions.WindowUtils.ProgramWindow;
 import org.teachingextensions.logo.Tortoise;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Blues;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Grays;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Reds;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Whites;
-import org.teachingextensions.logo.utils.ColorUtils.PenColors.Yellows;
 import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 
-public class DoubleLoop implements MouseLeftClickListener
+public class NumberTwo implements MouseLeftClickListener
 {
   private ProgramWindow programWindow;
-  public DoubleLoop()
+  public NumberTwo()
   {
     //    Create a ProgramWindow titled My Bubble --#1.1
     programWindow = new ProgramWindow("My Bubble");
@@ -58,71 +54,10 @@ public class DoubleLoop implements MouseLeftClickListener
       Tortoise.turn(90);
       Tortoise.move(25);
     }
-    //Colors
-    //
-    //
-    //
-    //
-    //
-    Tortoise.setPenWidth(5);
-    //
-    Tortoise.setPenColor(Yellows.Yellow);
-    Tortoise.setX(300);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
-    //
-    Tortoise.setPenColor(Reds.Red);
-    Tortoise.setX(350);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
-    //
-    Tortoise.setPenColor(Blues.Aqua);
-    Tortoise.setX(400);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
-    //
-    Tortoise.setPenColor(Grays.Black);
-    Tortoise.setX(450);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
-    //
-    Tortoise.setPenColor(Grays.Black);
-    Tortoise.setX(500);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
-    Tortoise.setPenWidth(3);
-    Tortoise.setPenColor(Whites.White);
-    Tortoise.setX(500);
-    Tortoise.setY(125);
-    for (int i = 0; i < 4; i++)
-    {
-      Tortoise.turn(90);
-      Tortoise.move(25);
-    }
     //Make a finish line
     Tortoise.setPenColor(Grays.Black);
     Tortoise.setPenWidth(2);
-    Tortoise.setX(600);
+    Tortoise.setX(550);
     Tortoise.setY(0);
     Tortoise.setAngle(180);
     Tortoise.move(500);
@@ -168,23 +103,16 @@ public class DoubleLoop implements MouseLeftClickListener
         Tortoise.move(25);
       }
     }
-    if (Tortoise.getX() == 600)
-    {
-      Tortoise.explode();
-      Tortoise.setPenColor(Reds.Crimson);
-      Tortoise.setPenWidth(5);
-    }
     if (Tortoise.getY() <= 225 && Tortoise.getY() >= 100)
     {
       if (Tortoise.getX() <= 550 && Tortoise.getX() >= 125)
       {
-        Tortoise.setX(100);
-        Tortoise.setY(300);
+        Tortoise.move(-25);
       }
     }
   }
   public static void main(String[] args)
   {
-    new DoubleLoop();
+    new NumberTwo();
   }
 }
