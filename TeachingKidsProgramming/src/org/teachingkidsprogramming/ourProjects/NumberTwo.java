@@ -4,6 +4,8 @@ import org.teachingextensions.WindowUtils.ProgramWindow;
 import org.teachingextensions.approvals.lite.util.NumberUtils;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Grays;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Oranges;
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 
 public class NumberTwo implements MouseLeftClickListener
@@ -14,7 +16,7 @@ public class NumberTwo implements MouseLeftClickListener
     //    Create a ProgramWindow titled My Bubble --#1.1
     programWindow = new ProgramWindow("My Bubble");
     //    Uncomment the line below -- #1.2
-    programWindow.setWindowVisible(true);
+    //programWindow.setWindowVisible(true);
     //    Have SimpleBubble listen for when the left mouse button is clicked in your program window --#2.2
     programWindow.addMouseLeftClickListener(this);
     Tortoise.getBackgroundWindow().addMouseLeftClickListener(this);
@@ -24,13 +26,109 @@ public class NumberTwo implements MouseLeftClickListener
     Tortoise.setSpeed(10);
     //Make a rectangular button with Tortoise 1
     beforePlayingTheGame();
+    makingTheObstacles();
+    if (Tortoise.getX() <= Block1X && Tortoise.getX() >= Block1X - 25)
+      //Move Tortoise to 100X 300Y
+      Tortoise.setX(75);
+    Tortoise.setY(300);
+    Tortoise.setAngle(90);
+  }
+  private void makingTheObstacles()
+  {
     int Block1X = NumberUtils.getRandomInt(100, 525);
     int Block1Y = NumberUtils.getRandomInt(200, 425);
     Tortoise.setX(Block1X);
     Tortoise.setY(Block1Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block2X = NumberUtils.getRandomInt(100, 525);
+    int Block2Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block2X);
+    Tortoise.setY(Block2Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block3X = NumberUtils.getRandomInt(100, 525);
+    int Block3Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block3X);
+    Tortoise.setY(Block3Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block4X = NumberUtils.getRandomInt(100, 525);
+    int Block4Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block4X);
+    Tortoise.setY(Block4Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block5X = NumberUtils.getRandomInt(100, 525);
+    int Block5Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block5X);
+    Tortoise.setY(Block5Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block6X = NumberUtils.getRandomInt(100, 525);
+    int Block6Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block6X);
+    Tortoise.setY(Block6Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block7X = NumberUtils.getRandomInt(100, 525);
+    int Block7Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block7X);
+    Tortoise.setY(Block7Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block8X = NumberUtils.getRandomInt(100, 525);
+    int Block8Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block8X);
+    Tortoise.setY(Block8Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block9X = NumberUtils.getRandomInt(100, 525);
+    int Block9Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block9X);
+    Tortoise.setY(Block9Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
+    int Block10X = NumberUtils.getRandomInt(100, 525);
+    int Block10Y = NumberUtils.getRandomInt(200, 425);
+    Tortoise.setX(Block10X);
+    Tortoise.setY(Block10Y);
+    for (int i = 0; i < 4; i++)
+    {
+      Tortoise.move(25);
+      Tortoise.turn(90);
+    }
   }
   private void beforePlayingTheGame()
   {
+    Tortoise.getBackgroundWindow().setBackground(Oranges.DarkOrange);
     Tortoise.setPenWidth(5);
     Tortoise.setX(200);
     Tortoise.setY(75);
@@ -67,18 +165,22 @@ public class NumberTwo implements MouseLeftClickListener
     Tortoise.setPenColor(Grays.Black);
     Tortoise.setPenWidth(2);
     Tortoise.setX(575);
-    Tortoise.setY(0);
+    Tortoise.setY(175);
     Tortoise.setAngle(180);
     Tortoise.move(500);
     //Make game boundary line
     Tortoise.setX(0);
     Tortoise.setY(175);
     Tortoise.setAngle(90);
-    Tortoise.move(625);
-    //Move Tortoise to 100X 300Y
-    Tortoise.setX(75);
-    Tortoise.setY(300);
+    Tortoise.move(575);
+    Tortoise.setX(0);
+    Tortoise.setY(443);
     Tortoise.setAngle(90);
+    Tortoise.move(575);
+    Tortoise.setX(0);
+    Tortoise.setY(175);
+    Tortoise.setAngle(180);
+    Tortoise.move(268);
   }
   public void onLeftMouseClick(int x, int y)
   {
@@ -117,13 +219,22 @@ public class NumberTwo implements MouseLeftClickListener
         Tortoise.move(25);
       }
     }
-    //Make a box around controls that you can't go into
+    //Make a box around arena that you can't go into
     if (Tortoise.getY() <= 175 && Tortoise.getY() >= 50)
     {
-      if (Tortoise.getX() <= 300 && Tortoise.getX() >= 125)
-      {
-        Tortoise.move(-25);
-      }
+      Tortoise.move(-25);
+    }
+    if (Tortoise.getY() >= 450)
+    {
+      Tortoise.move(-25);
+    }
+    if (Tortoise.getX() >= 575)
+    {
+      MessageBox.showMessage("You Win! :D");
+    }
+    if (Tortoise.getX() <= 0)
+    {
+      Tortoise.move(-25);
     }
   }
   public static void main(String[] args)
