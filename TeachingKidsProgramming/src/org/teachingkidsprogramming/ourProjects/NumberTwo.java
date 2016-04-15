@@ -3,6 +3,7 @@ package org.teachingkidsprogramming.ourProjects;
 import org.teachingextensions.WindowUtils.ProgramWindow;
 import org.teachingextensions.approvals.lite.util.NumberUtils;
 import org.teachingextensions.logo.Tortoise;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Blues;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Grays;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Oranges;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
@@ -10,7 +11,7 @@ import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 
 public class NumberTwo implements MouseLeftClickListener
 {
-  private ProgramWindow programWindow;
+  public ProgramWindow programWindow;
   public NumberTwo()
   {
     //    Create a ProgramWindow titled My Bubble --#1.1
@@ -27,33 +28,36 @@ public class NumberTwo implements MouseLeftClickListener
     //Make a rectangular button with Tortoise 1
     beforePlayingTheGame();
     makingTheObstacles();
-    obstacleCoding();
+    //MessageBox.showMessage("" + Block1X);
+    //
+    //
+    //
+    //3
+    //
+    //obstacleCoding();
     //Move Tortoise to 100X 300Y
     Tortoise.setX(75);
     Tortoise.setY(300);
     Tortoise.setAngle(90);
+    //
+    //
+    //
+    //
+    //
   }
-  private void obstacleCoding()
-  {
-    if (Tortoise.getX() <= Block1X + 0 && Tortoise.getX() >= Block1X - 25)
-    {
-      if (Tortoise.getY() <= Block1Y + 0 && Tortoise.getY() >= Block1Y - 25)
-      {
-        Tortoise.hide();
-      }
-    }
-  }
-  private void makingTheObstacles()
+  public void makingTheObstacles()
   {
     int Block1X = NumberUtils.getRandomInt(100, 525);
     int Block1Y = NumberUtils.getRandomInt(200, 425);
     Tortoise.setX(Block1X);
     Tortoise.setY(Block1Y);
+    Tortoise.setPenColor(Blues.Blue);
     for (int i = 0; i < 4; i++)
     {
       Tortoise.move(25);
       Tortoise.turn(90);
     }
+    Tortoise.setPenColor(Grays.Black);
     int Block2X = NumberUtils.getRandomInt(100, 525);
     int Block2Y = NumberUtils.getRandomInt(200, 425);
     Tortoise.setX(Block2X);
@@ -135,8 +139,20 @@ public class NumberTwo implements MouseLeftClickListener
       Tortoise.move(25);
       Tortoise.turn(90);
     }
+    //
+    //
+    //
+    //
+    //
+    if (Tortoise.getX() <= Block1X + 0 && Tortoise.getX() >= Block1X - 25)
+    {
+      if (Tortoise.getY() <= Block1Y + 0 && Tortoise.getY() >= Block1Y + 25)
+      {
+        Tortoise.hide();
+      }
+    }
   }
-  private void beforePlayingTheGame()
+  public void beforePlayingTheGame()
   {
     Tortoise.getBackgroundWindow().setBackground(Oranges.DarkOrange);
     Tortoise.setPenWidth(5);
@@ -195,7 +211,6 @@ public class NumberTwo implements MouseLeftClickListener
   public void onLeftMouseClick(int x, int y)
   {
     //If button is pressed (Hint: Find X First, then find Y)(Mouse Left Click Listener) #5.1
-    Tortoise.show();
     if (x >= 200 && x <= 225)
     {
       if (y >= 125 && y <= 150)
@@ -243,6 +258,10 @@ public class NumberTwo implements MouseLeftClickListener
       MessageBox.showMessage("You Win! :D");
     }
     if (Tortoise.getX() <= 0)
+    {
+      Tortoise.move(-25);
+    }
+    if (Tortoise.getX() >= 625)
     {
       Tortoise.move(-25);
     }
