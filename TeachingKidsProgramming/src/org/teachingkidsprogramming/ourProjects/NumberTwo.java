@@ -151,6 +151,14 @@ public class NumberTwo implements MouseLeftClickListener
         Tortoise.hide();
       }
     }
+    if (Tortoise.getX() <= Block1X + 0 && Tortoise.getX() >= Block1X - 25)
+    {
+      if (Tortoise.getY() <= Block1Y + 0 && Tortoise.getY() >= Block1Y - 25)
+      {
+        Tortoise.hide();
+        MessageBox.showMessage("You Lose!!!!!");
+      }
+    }
   }
   public void beforePlayingTheGame()
   {
