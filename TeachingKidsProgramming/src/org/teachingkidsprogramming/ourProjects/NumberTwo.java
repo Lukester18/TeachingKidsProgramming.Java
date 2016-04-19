@@ -156,7 +156,6 @@ public class NumberTwo implements MouseLeftClickListener
       if (Tortoise.getY() <= Block1Y + 0 && Tortoise.getY() >= Block1Y - 25)
       {
         Tortoise.hide();
-        MessageBox.showMessage("You Lose!!!!!");
       }
     }
   }
