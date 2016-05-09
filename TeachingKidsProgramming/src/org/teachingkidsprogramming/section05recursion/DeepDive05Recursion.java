@@ -1,14 +1,15 @@
 package org.teachingkidsprogramming.section05recursion;
 
+import java.awt.Color;
+import java.awt.Cursor;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
-
-import java.awt.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 public class DeepDive05Recursion
 {
@@ -61,7 +62,7 @@ public class DeepDive05Recursion
   public void findTheNumberPositionOfTheWorld() throws Exception
   {
     List<String> messages = Arrays.asList("Hello", "World!", "How", "Are", "You");
-    String result = messages.get(____);
+    String result = messages.get(1);
     Assert.assertEquals("World!", result);
   }
   @Test
@@ -75,33 +76,33 @@ public class DeepDive05Recursion
   public void whatIsLastNow() throws Exception
   {
     List<String> messages = Arrays.asList("Hello", "World!", "How", "Are", "You");
-    messages.set(4, ___);
+    messages.set(4, "The rest of them");
     String result = messages.get(4);
     Assert.assertEquals("The rest of them", result);
   }
   @Test
   public void putAQuarterAtTheEnd() throws Exception
   {
-    int[] coins = {1, 5, 10, ____};
+    int[] coins = {1, 5, 10, 25};
     Assert.assertEquals(25, coins[3]);
   }
   @Test
   public void getThirdCoin() throws Exception
   {
     int[] coins = {1, 5, 10, 25};
-    Assert.assertEquals(10, coins[____]);
+    Assert.assertEquals(10, coins[2]);
   }
   @Test
   public void whichCoinIsSecond() throws Exception
   {
     int[] coins = {1, 5, 10, 25};
-    Assert.assertEquals(____, coins[1]);
+    Assert.assertEquals(5, coins[1]);
   }
   @Test
   public void putAFiftyCentPieceFirst() throws Exception
   {
     int[] coins = {1, 5, 10, 25};
-    coins[0] = ____;
+    coins[0] = 50;
     Assert.assertEquals(50, coins[0]);
   }
   /**
