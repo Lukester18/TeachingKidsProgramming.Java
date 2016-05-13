@@ -77,5 +77,7 @@ public class Battleship
     }
     int [] afterTurn = [Player1life, Player2life];
     return afterTurn;
+    //something or other is really cool. cuz da's coo.
+    
   }
 }
